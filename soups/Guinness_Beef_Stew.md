@@ -1,6 +1,6 @@
 # Guinness Beef Stew
 
-### Recipe Source
+### Original Recipe Source
 https://www.recipetineats.com/irish-beef-and-guinness-stew/#recipe
 
 ## Description
