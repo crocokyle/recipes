@@ -1,6 +1,6 @@
 # Title
 
-### Recipe Source
+### Original Recipe Source (*Remove this section if it's your own*)
 https://www.recipetineats.com/irish-beef-and-guinness-stew/#recipe
 
 ## Description
