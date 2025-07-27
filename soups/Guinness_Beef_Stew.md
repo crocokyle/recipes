@@ -13,7 +13,7 @@ A beef stew featuring tender beef simmered in a rich, deeply flavored sauce made
 - 2.5 lb beef chuck or beef brisket
 - 3/4 tsp each salt and black pepper
 - 3 garlic cloves (*minced*)
-- 2 onions (*yellow or white*)
+- 1 onions (*yellow or white*)
 - 3 tbsp flour (*all-purpose/plain*)
 - 14.9 oz Guinness Beer
 - 4 Tbsp tomato paste
