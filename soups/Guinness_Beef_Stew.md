@@ -26,7 +26,7 @@ A beef stew featuring tender beef simmered in a rich, deeply flavored sauce made
 
 ## Instructions
 
-1. Cut the beef into 2 inch chunks. Pat dry then sprinkle with salt and pepper.
+1. Trim the fat if using brisket, then cut the beef into 2 inch chunks. Pat dry then sprinkle with salt and pepper.
 2. Heat oil in a heavy based pot over high heat. Add beef in batches and brown well all over. Remove onto plate. Repeat with remaining beef.
 3. (Optional) If you have a bottle/can size of Guinness that isn't a multiple of 14.9 oz, deglaze the pan with whatever is leftover. 
 4. Lower heat to medium. If the pot is looking dry, add oil.
