@@ -7,6 +7,33 @@ title: My Recipe Book
 
 Browse recipes by category:
 
+--- DEBUG OUTPUT ---
+<h2>Debug: Raw site.recipes content</h2>
+{% if site.recipes.size == 0 %}
+  <p><strong>site.recipes is empty!</strong> This means Jekyll isn't finding or processing your recipes in the `_recipes` collection.</p>
+{% else %}
+  <p><strong>Found {{ site.recipes.size }} recipes.</strong> Here are their paths and URLs:</p>
+  <ul>
+  {% for recipe in site.recipes %}
+    <li>
+      <strong>Path:</strong> `{{ recipe.path }}` <br>
+      <strong>URL:</strong> `{{ recipe.url }}` <br>
+      <strong>Dir:</strong> `{{ recipe.dir }}` <br>
+      <strong>Name:</strong> `{{ recipe.name }}` <br>
+      <strong>Ext:</strong> `{{ recipe.ext }}` <br>
+      <strong>Title (from FM):</strong> `{{ recipe.title }}`
+      <hr>
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}
+--- END DEBUG OUTPUT ---
+
+{% comment %}
+   The rest of your Liquid code for listing categories goes here, unchanged.
+   (Copy and paste the entire block from the previous solution, after this debug part)
+{% endcomment %}
+
 {% assign category_groups_unique = "" | split: "," %}
 
 {% for recipe in site.recipes %}
