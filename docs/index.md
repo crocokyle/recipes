@@ -47,8 +47,11 @@ Browse recipes by category:
   {% endif %}
 
   <li>
-    <h2>{{ category_display_name }}</h2>
-    <ul id="{{ path | slugify }}" class="recipe-list">
+    <h2 class="category-toggle" data-target="{{ path | slugify }}">
+      {{ category_display_name }}
+      <span class="toggle-icon">+</span> {# Plus/minus icon #}
+    </h2>
+    <ul id="{{ path | slugify }}" class="recipe-list"> {# Add the 'recipe-list' class #}
       {% for recipe in site.recipes %}
         {% comment %} We must recalculate the path for each recipe to check for a match. {% endcomment %}
         {% assign r_url_parts = recipe.url | split: '/' %}
@@ -127,6 +130,17 @@ h1 {
     font-size: 2.2em;
     border-bottom: 2px solid #eef; /* Light underline */
     padding-bottom: 10px;
+    cursor: pointer; /* Indicate it's clickable */
+    display: flex; /* Allow icon to sit next to text */
+    justify-content: space-between; /* Push icon to the right */
+    align-items: center;
+}
+
+.recipe-categories h2 .toggle-icon {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1; /* Vertically align the icon */
+    transition: transform 0.3s ease; /* Smooth rotation for the icon */
 }
 
 /* Recipe List within Categories */
@@ -136,6 +150,21 @@ h1 {
     display: grid; /* Use CSS Grid for a multi-column layout */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
     gap: 15px; /* Spacing between grid items */
+    max-height: 0; /* Initially hide with 0 max-height */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease; /* Smooth transition */
+    opacity: 0; /* Start hidden */
+}
+
+.recipe-list.expanded {
+    max-height: 1000px; /* Sufficiently large value for expanded state */
+    opacity: 1; /* Show when expanded */
+    margin-top: 15px; /* Add some spacing when expanded */
+}
+
+/* Rotate the icon when the category is expanded */
+.category-toggle .toggle-icon.expanded {
+    transform: rotate(45deg); /* + turns into an X */
 }
 
 .recipe-list li {
@@ -168,3 +197,27 @@ h1 {
     text-decoration: underline;
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryToggles = document.querySelectorAll('.category-toggle');
+
+  categoryToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const targetId = this.dataset.target;
+      const recipeList = document.getElementById(targetId);
+      const toggleIcon = this.querySelector('.toggle-icon');
+
+      if (recipeList.classList.contains('expanded')) {
+        recipeList.classList.remove('expanded');
+        toggleIcon.textContent = '+';
+        toggleIcon.classList.remove('expanded');
+      } else {
+        recipeList.classList.add('expanded');
+        toggleIcon.textContent = '\u2212';
+        toggleIcon.classList.add('expanded');
+      }
+    });
+  });
+});
+</script>
