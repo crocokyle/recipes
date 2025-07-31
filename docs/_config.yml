@@ -6,7 +6,7 @@ url: "https://recipes.kyle-dixon.com"
 baseurl: ""
 
 # https://pages.github.com/themes/
-remote_theme: pages-themes/cayman@v0.2.0 # Recommended for GitHub Pages themes
+remote_theme: sujaykundu777/devlopr-jekyll
 plugins:
   - jekyll-remote-theme
 
