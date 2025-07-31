@@ -49,3 +49,8 @@ A beef stew featuring tender beef simmered in a rich, deeply flavored sauce made
 11. Add the mushrooms, carrots and celery. Depending on how soft you want the vegetables to be, add them 15 minutes earlier.
 12. Remove lid then simmer for a further 30 – 45 minutes or until the beef falls apart at a touch, the sauce has reduced and thickened slightly.
 13. Skim off fat on surface, if desired. Adjust salt and pepper to taste. Remove bay leaves and thyme.
+
+
+---
+**Yield:** {{ page.servings }}
+**Total Time:** {{ page.prep_time }} prep + {{ page.cook_time }} cook
