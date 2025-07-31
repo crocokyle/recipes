@@ -8,27 +8,62 @@ title: My Recipe Book
 Browse recipes by category:
 
 {% comment %}
-  Group all recipes by their directory path.
-  The expression takes a recipe's URL (e.g., "/recipes/soups/stew/"),
-  removes the collection prefix and trailing slash, leaving just the path (e.g., "soups/stew").
-  This becomes the key for grouping.
+  --- STEP 1: Collect all unique category paths ---
+  We loop through every recipe and figure out its parent directory path.
+  This path becomes its "category path". We collect all of these into an array.
 {% endcomment %}
-{% assign recipes_by_path = site.recipes | group_by_exp: "recipe", "recipe.url | remove_first: '/recipes/' | remove_last: '/' " | sort: "name" %}
+{% assign all_category_paths = "" | split: "," %}
+{% for recipe in site.recipes %}
+  {% assign url_parts = recipe.url | split: '/' %}
+  {% comment %} The category path depth is the URL's depth minus the base, collection, recipe folder, and trailing slash. {% endcomment %}
+  {% assign category_path_depth = url_parts.size | minus: 4 %}
 
+  {% if category_path_depth < 0 %}{% assign category_path_depth = 0 %}{% endif %}
+
+  {% assign category_parts = url_parts | slice: 2, category_path_depth %}
+  {% assign category_path = category_parts | join: '/' %}
+
+  {% assign all_category_paths = all_category_paths | push: category_path %}
+{% endfor %}
+
+{% comment %}
+  Now we have an array of all paths, including duplicates.
+  Let's get the unique, sorted list of paths.
+{% endcomment %}
+{% assign unique_paths = all_category_paths | uniq | sort %}
+
+
+{% comment %}
+  --- STEP 2: Display the recipes under each unique path ---
+  We loop through our clean list of unique paths. For each path, we loop
+  through ALL recipes again, check if they belong to that path, and list them if they do.
+{% endcomment %}
 <ul class="recipe-categories">
-{% for group in recipes_by_path %}
-  {% assign category_path = group.name %}
-  {% assign category_display_name = category_path | replace: '/', ' &rarr; ' | replace: '-', ' ' | capitalize %}
+{% for path in unique_paths %}
+  {% if path == "" %}
+    {% assign category_display_name = "Uncategorized" %}
+  {% else %}
+    {% assign category_display_name = path | replace: '/', ' &rarr; ' | replace: '-', ' ' | capitalize %}
+  {% endif %}
 
   <li>
     <h2>{{ category_display_name }}</h2>
-    <ul id="{{ category_path | slugify }}" class="recipe-list">
-      {% for recipe in group.items %}
-        <li>
-          <a href="{{ recipe.url | relative_url }}">
-            {{ recipe.title }}
-          </a>
-        </li>
+    <ul id="{{ path | slugify }}" class="recipe-list">
+      {% for recipe in site.recipes %}
+        {% comment %} We must recalculate the path for each recipe to check for a match. {% endcomment %}
+        {% assign r_url_parts = recipe.url | split: '/' %}
+        {% assign r_path_depth = r_url_parts.size | minus: 4 %}
+        {% if r_path_depth < 0 %}{% assign r_path_depth = 0 %}{% endif %}
+        {% assign r_category_parts = r_url_parts | slice: 2, r_path_depth %}
+        {% assign current_recipe_path = r_category_parts | join: '/' %}
+
+        {% if current_recipe_path == path %}
+          <li>
+            <a href="{{ recipe.url | relative_url }}">
+              {{ recipe.title }}
+            </a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </li>
