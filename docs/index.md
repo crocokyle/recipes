@@ -49,9 +49,9 @@ Browse recipes by category:
   <li>
     <h2 class="category-toggle" data-target="{{ path | slugify }}">
       {{ category_display_name }}
-      <span class="toggle-icon">+</span> {# Plus/minus icon #}
+      <span class="toggle-icon">+</span>
     </h2>
-    <ul id="{{ path | slugify }}" class="recipe-list"> {# Add the 'recipe-list' class #}
+    <ul id="{{ path | slugify }}" class="recipe-list">
       {% for recipe in site.recipes %}
         {% comment %} We must recalculate the path for each recipe to check for a match. {% endcomment %}
         {% assign r_url_parts = recipe.url | split: '/' %}
