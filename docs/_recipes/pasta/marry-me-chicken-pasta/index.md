@@ -1,10 +1,10 @@
 ---
 layout: recipe # You'll define this layout in Step 3
-title: Decadent Chocolate Cake
-category: Desserts # Custom front matter for filtering/display
-prep_time: 30 minutes
-cook_time: 45 minutes
-servings: 8
+title: Marry Me Chicken Pasta
+category: Pasta # Custom front matter for filtering/display
+prep_time: 15 minutes
+cook_time: 20 minutes
+servings: 2
 image: /recipes/desserts/chocolate-cake/cake-slice.jpg # Relative path to image
 ---
 
