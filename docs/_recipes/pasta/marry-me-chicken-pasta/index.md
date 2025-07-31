@@ -4,29 +4,43 @@ title: Marry Me Chicken Pasta
 category: Pasta # Custom front matter for filtering/display
 prep_time: 15 minutes
 cook_time: 20 minutes
-servings: 2
-image: /recipes/desserts/chocolate-cake/cake-slice.jpg # Relative path to image
+
 ---
 
 ## Ingredients
 
-* 1 3/4 cups all-purpose flour
-* 1 3/4 cups granulated sugar
-* 3/4 cup unsweetened cocoa powder
-* ... (more ingredients)
+* 3 Tbsp all-purpose flour
+* 1/4 cup parmesean cheese
+* 1/2 cup heavy whipping cream
+* 1 Tbsp olive oil
+* salt
+* pepper
+* 1 chicken breast
+* 1 Tbsp unsalted butter
+* 2 cloves minced garlic
+* 1/2 cup chicken stock
+* 1/2 tsp red pepper flakes
+* 1/8 tsp oregano
+* 1/8 tsp thyme
+* sprig of basil
+* 1/3 cup sundried tomatoes
+* 1/2 cup pasta
+
 
 ## Instructions
 
-1.  **Preheat oven** to 350°F (175°C). Grease and flour two 9-inch round baking pans.
-2.  **In a large bowl,** sift together flour, sugar, cocoa, baking soda, baking powder, and salt.
-3.  **Add eggs,** milk, oil, and vanilla extract. Beat on medium speed for 2 minutes.
-4.  **Stir in boiling water** last (the batter will be thin).
-5.  **Pour evenly** into prepared pans.
-6.  **Bake for 30-35 minutes**, or until a wooden skewer inserted into the center comes out clean.
-7.  **Cool in the pans** for 10 minutes before inverting onto a wire rack to cool completely.
-
-Enjoy with your favorite frosting!
+1.  Season chicken with salt and pepper, then dredge in flour and shake off any excess
+2.  In a large skillet, heat olive oil and melt the butter on medium heat. Swirl pan to coat with oil and butter evenly
+3.  Cook the chicken. 7 minutes on each side
+4. Cook pasta according to box
+5.  Remove chicken and set aside
+6. Saute garlic in same pan until fragrant
+7. If using cast iron, add chicken stock to deglaze. If using ceramic just add chicken stock (may want to reduce the amount added, otherwise sauce becomes thin)
+8. Reduce heat to medium low and add heavy whipping cream, parmesean,and seasonings.
+9. Add sundried tomatoes 
+10. Cut up chicken and add to sauce
+11. Allow the sauce to thicken
+12. Tear up basil to add as topping
+13. Serve over 
 
 ---
-**Yield:** {{ page.servings }}
-**Total Time:** {{ page.prep_time }} prep + {{ page.cook_time }} cook
