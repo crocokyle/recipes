@@ -1,4 +1,15 @@
-# Guinness Beef Stew
+---
+layout: recipe
+title: Guinness Beef Stew
+category: Soups
+prep_time: 20 minutes
+cook_time: 2 hours and 45 minutes
+servings: 6-8
+image: /recipes/desserts/chocolate-cake/cake-slice.jpg
+---
+
+
+#
 
 ### Original Recipe Source
 https://www.recipetineats.com/irish-beef-and-guinness-stew/#recipe

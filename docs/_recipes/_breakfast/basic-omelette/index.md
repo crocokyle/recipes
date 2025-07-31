@@ -5,7 +5,7 @@ category: Breakfast
 prep_time: 5 minutes
 cook_time: 6 minutes
 servings: 1
-image: /recipes/desserts/chocolate-cake/cake-slice.jpg # Relative path to image
+image: /recipes/desserts/chocolate-cake/cake-slice.jpg
 ---
 
 ## Description
