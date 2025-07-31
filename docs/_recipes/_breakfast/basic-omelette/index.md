@@ -1,4 +1,12 @@
-# Basic Omelette
+---
+layout: recipe
+title: Basic Omelette
+category: Breakfast
+prep_time: 5 minutes
+cook_time: 6 minutes
+servings: 1
+image: /recipes/desserts/chocolate-cake/cake-slice.jpg # Relative path to image
+---
 
 ## Description
 
@@ -30,3 +38,8 @@ This is just an example of a basic omelette to work on technique. This specific 
    > *Usually you need to fold the omelette further than you think to actually get it folded in half.*
 9. Once you've got the mallard reaction you want on the bottom, flip the omelette for about 1-2 minutes to get it on the other side and immediately plate it.
    > *Depending on the pan's temperature, you may already have the mallard reaction on both sides. If that is the case, plate it right away.*
+
+
+---
+**Yield:** {{ page.servings }}
+**Total Time:** {{ page.prep_time }} prep + {{ page.cook_time }} cook
