@@ -1,1 +1,35 @@
-theme: jekyll-theme-minimal
+# docs/_config.yml
+
+title: My Amazing Recipe Book
+description: A collection of my favorite recipes.
+url: "https://recipes.kyle-dixon.com"
+baseurl: ""
+
+# Theme configuration (choose one that works for you)
+# You can find more themes at https://pages.github.com/themes/
+# For example:
+# theme: jekyll-theme-cayman # Or another theme, e.g., "jekyll-theme-architect"
+remote_theme: pages-themes/cayman@v0.2.0 # Recommended for GitHub Pages themes
+plugins:
+  - jekyll-remote-theme # Required for remote_theme
+
+# Define your 'recipes' collection
+collections:
+  recipes:
+    output: true # This makes Jekyll generate a page for each recipe
+    permalink: /:collection/:path/ # URL structure: /recipes/category/recipe-name/
+
+# Exclude files/folders from Jekyll processing (optional, but good practice)
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CNAME # GitHub handles this, no need for Jekyll to process it
+  - .gitattributes
