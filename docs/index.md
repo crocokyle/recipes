@@ -20,7 +20,7 @@ Browse recipes by category:
     For example: /recipes/breakfast/basic-omelette/ becomes 'breakfast'
   {% endcomment %}
   {% assign url_parts = recipe.url | split: "/" %}
-  {% assign category_slug = url_parts[2] %} {# This should be 'breakfast', 'soups', etc. #}
+  {% assign category_slug = url_parts[2] %}
 
   {% unless category_slug == "" or category_groups_unique contains category_slug %}
     {% assign category_groups_unique = category_groups_unique | push: category_slug %}
