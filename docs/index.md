@@ -8,45 +8,30 @@ title: My Recipe Book
 Browse recipes by category:
 
 {% comment %}
-   The rest of your Liquid code for listing categories goes here, unchanged.
-   (Copy and paste the entire block from the previous solution, after this debug part)
+  Group all recipes by their directory path.
+  The expression takes a recipe's URL (e.g., "/recipes/soups/stew/"),
+  removes the collection prefix and trailing slash, leaving just the path (e.g., "soups/stew").
+  This becomes the key for grouping.
 {% endcomment %}
-
-{% assign category_groups_unique = "" | split: "," %}
-
-{% for recipe in site.recipes %}
-  {% comment %}
-    Extract the first segment of the path after '/recipes/' from the recipe.url
-    For example: /recipes/breakfast/basic-omelette/ becomes 'breakfast'
-  {% endcomment %}
-  {% assign url_parts = recipe.url | split: "/" %}
-  {% assign category_slug = url_parts[2] %}
-
-  {% unless category_slug == "" or category_groups_unique contains category_slug %}
-    {% assign category_groups_unique = category_groups_unique | push: category_slug %}
-  {% endunless %}
-{% endfor %}
+{% assign recipes_by_path = site.recipes | group_by_exp: "recipe", "recipe.url | remove_first: '/recipes/' | remove_last: '/' " | sort: "name" %}
 
 <ul class="recipe-categories">
-{% for category_slug in category_groups_unique | sort %}
-    {% assign category_display_name = category_slug | replace: "-", " " | capitalize %}
-    <li>
-        <h2><a href="#{{ category_slug }}">{{ category_display_name }}</a></h2>
-        <ul id="{{ category_slug }}" class="recipe-list">
-        {% for recipe in site.recipes %}
-            {% assign recipe_url_parts = recipe.url | split: "/" %}
-            {% assign current_recipe_category_slug = recipe_url_parts[2] %}
+{% for group in recipes_by_path %}
+  {% assign category_path = group.name %}
+  {% assign category_display_name = category_path | replace: '/', ' &rarr; ' | replace: '-', ' ' | capitalize %}
 
-            {% if current_recipe_category_slug == category_slug %}
-                <li>
-                    <a href="{{ recipe.url | relative_url }}">
-                        {% if recipe.title %}{{ recipe.title }}{% else %}{{ recipe.name | remove: recipe.ext | replace: "-", " " | capitalize }}{% endif %}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
-        </ul>
-    </li>
+  <li>
+    <h2>{{ category_display_name }}</h2>
+    <ul id="{{ category_path | slugify }}" class="recipe-list">
+      {% for recipe in group.items %}
+        <li>
+          <a href="{{ recipe.url | relative_url }}">
+            {{ recipe.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
 {% endfor %}
 </ul>
 
@@ -60,7 +45,6 @@ body {
 }
 
 /* Main content container adjustments (assuming theme provides one) */
-/* If your theme has a specific class for the main content, replace `main` or adjust */
 main {
     max-width: 960px; /* Wider content area */
     margin: 40px auto;
@@ -110,11 +94,6 @@ h1 {
     padding-bottom: 10px;
 }
 
-.recipe-categories h2 a {
-    text-decoration: none;
-    color: inherit; /* Inherit color from h2 */
-}
-
 /* Recipe List within Categories */
 .recipe-list {
     list-style: none; /* Remove default disc bullets */
@@ -152,30 +131,5 @@ h1 {
 .recipe-list li a:hover {
     color: #007bff; /* Brighter blue on hover */
     text-decoration: underline;
-}
-
-/* Small separator for clarity */
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-    margin: 40px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    main {
-        margin: 20px auto;
-        padding: 15px 20px;
-    }
-    h1 {
-        font-size: 2.2em;
-    }
-    .recipe-categories h2 {
-        font-size: 1.8em;
-    }
-    .recipe-list {
-        grid-template-columns: 1fr; /* Single column on small screens */
-    }
 }
 </style>
