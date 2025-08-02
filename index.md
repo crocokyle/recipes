@@ -1,4 +1,4 @@
 ---
 layout: overview
-title: Übersicht #Overview
+title: Overview
 ---
