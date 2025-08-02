@@ -2,7 +2,7 @@
 layout: recipe
 title: Basic Omelette
 category: Breakfast
-persons: 4
+persons: 1
 image:
 ---
 
