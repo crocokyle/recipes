@@ -24,8 +24,6 @@ image:
 - Wash and dry the spinach.
 - Scramble 3 eggs in a cup or bowl
 
-<!-- ad -->
-
 <!-- Instructions -->
 
 1. Using a ceramic pan, preheat at 7/9 on an electric stove.

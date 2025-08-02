@@ -6,9 +6,10 @@
       {% include nav.html %}
       <h2 id="title">{{page.title}}</h2>
       {% if content contains "<!-- ad -->" %}
+        {% assign parts = content | split:"<!-- ad -->" %}
         <div id="ingredients">
             <h3>Ingredients for {{page.persons}} persons:</h3>
-          {{ content | split:"<!-- ad -->" | first }}
+          {{ parts[0] }}
         </div> <!-- /ingredients -->
         <div id="picture">
           {% if page.image %}
@@ -20,11 +21,11 @@
 
         <div id="prep">
           <h3>Prep:</h3>
-          {{ content | split:"<!-- ad -->" | [1] }}
+          {{ parts[1] | split: "<!-- Instructions -->" | first }}
         </div> <!-- /prep -->
         <div id="instructions">
             <h3>Instructions:</h3>
-          {{ content | split:"<!-- ad -->" | last }}
+          {{ parts[1] | split: "<!-- Instructions -->" | last }}
         </div> <!-- /instructions -->
 
       {% else %}
