@@ -19,11 +19,14 @@ image:
 
 <!-- Zubereitung -->
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Prep
 
+- Sauté the mushrooms using salt, pepper, and butter on medium-high heat (if using an aluminum or ceramic pan) or medium heat (if using a cast iron or carbon steel).
+- Cook the bacon using your preferred method and chop into half inch squares.
+- Wash and dry the spinach.
+- Scramble 3 eggs in a cup or bowl
+
+## Instructions
 1. Using a ceramic pan, preheat at 7/9 on an electric stove.
 2. Once the pan is feeling toasty if you hover your hand about an inch above it, add a small amount of butter to the pan.
 3. Once the butter is starting to bubble, pour in the eggs.
