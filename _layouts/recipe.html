@@ -5,7 +5,7 @@
     <div id="wrapper">
       {% include nav.html %}
       <h2 id="title">{{page.title}}</h2>
-      {% if content contains "<!-- ad -->" and content contains "<!-- instructions -->" %}
+      {% if content contains "<!-- ad -->" %}
         <div id="ingredients">
             <h3>Ingredients for {{page.persons}} persons:</h3>
           {{ content | split:"<!-- ad -->" | first }}
@@ -20,11 +20,11 @@
 
         <div id="prep">
           <h3>Prep:</h3>
-          {{ content | split:"<!-- ad -->" | last | split:"<!-- instructions -->" | first }}
+          {{ content | split:"<!-- ad -->" | [1] }}
         </div> <!-- /prep -->
         <div id="instructions">
             <h3>Instructions:</h3>
-          {{ content | split:"<!-- instructions -->" | last }}
+          {{ content | split:"<!-- ad -->" | last }}
         </div> <!-- /instructions -->
 
       {% else %}
