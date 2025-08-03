@@ -6,7 +6,7 @@ persons: 6-8
 image:
 ---
 
-<!-- Zutaten -->
+<!-- Ingredients -->
 
 | 2 tbsp | olive oil |
 | 2.5 lbs. | beef chuck or beef brisket |

@@ -1,15 +1,15 @@
 ---
 layout: recipe
-title: Jared's Shitty Omelette
-category: Shitty Food
-persons: 1
-image: shit.jpg
+title: London Broil
+category: Beef
+persons: 6-8
+image: london-broil.jpg
 ---
 
 <!-- Ingredients -->
 
-| 3 | Eggs |
-| 2 oz. | Baby bella mushrooms |
+| 1 | Top Round |
+| 4 oz. | course ground salt |
 | 2 oz. | chopped, cooked bacon |
 | 3 oz. | Mexican shredded cheese |
 

@@ -6,7 +6,7 @@ persons: 1
 image:
 ---
 
-<!-- Zutaten -->
+<!-- Ingredients -->
 
 | 3 | Eggs |
 | 2 oz. | Baby bella mushrooms |
