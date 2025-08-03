@@ -1,6 +1,5 @@
 body {
   background-color: #010409;
-  color: #DDDDDD;
   margin-top: 0px; /* I hate these standard margins. */
   font-family: "Kaushan Script", cursive;
 }
@@ -28,22 +27,21 @@ body {
 
 h4, h3, h2 {
   font-family: "Kaushan Script", cursive;
-  color: #ffffff;
 }
 
 a {
-  color: #61afef;
+  color: #00ade3;
   font-family: "Kalam", sans-serif;
   text-decoration: none;
 }
 
 a:hover {
-  color: #c678dd;
+  color: #b20436;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #98c379;
+  color: #690220;
   text-decoration: none;
 }
 
@@ -106,7 +104,7 @@ a:visited {
 }
 
 #ingredients tr:nth-child(odd) {
-   background-color: #3c424f;
+  background-color: #eee;
 }
 
 #ingredients td:nth-child(odd) {
@@ -124,7 +122,7 @@ a:visited {
 }
 
 #picture > img {
-  background: #282c34;
+  background: #fff;
   padding: 5px 5px 20px 5px;
   max-width: 90%;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
@@ -153,7 +151,7 @@ ul {
     width: auto;
     margin: 0 auto;
     padding: 10px;
-    background: #333842;
+    background: #fffef8;
     box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
   }
 
