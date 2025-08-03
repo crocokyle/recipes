@@ -3,7 +3,7 @@ layout: recipe
 title: Jared's Shitty Omelette
 category: Shitty Food
 persons: 1
-image:
+image: shit.jpg
 ---
 
 <!-- Zutaten -->
