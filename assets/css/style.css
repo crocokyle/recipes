@@ -5,8 +5,6 @@ body {
 }
 
 #wrapper {
-  display: flex;
-  align-items: flex-start;
   margin: 30px auto;
   max-width: 1000px;
   padding-top: 30px;
