@@ -8,10 +8,10 @@ image:
 
 <!-- Zutaten -->
 
-| 3   | Eggs |
-| 2 oz.  | Baby bella mushrooms |
-| 2 oz.  | chopped, cooked bacon |
-| 3 oz   | Mexican shredded cheese |
+| 3 | Eggs |
+| 2 oz. | Baby bella mushrooms |
+| 2 oz. | chopped, cooked bacon |
+| 3 oz. | Mexican shredded cheese |
 
 <!-- ad -->
 

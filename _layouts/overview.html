@@ -8,12 +8,16 @@
         <div id="table-of-contents">
             <h2>Categories</h2>
             {% for category in site.categories %}
-            <h4>{{ category[0] }}</h4>
-            <ul>
-                {% for post in category[1] %}
-                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
+            <details>
+                <summary>{{ category[0] }}</summary>
+                <p>
+                <ul>
+                    {% for post in category[1] %}
+                    <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                </p>
+            </details>
             {% endfor %}
         </div> <!-- /table-of-contents -->
     </div>
