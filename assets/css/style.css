@@ -1,12 +1,11 @@
 body {
   background-color: #282c34;
-  color: #DDDDDD;
+  color: #cccccc;
   margin-top: 0px; /* I hate these standard margins. */
 }
 
 #wrapper {
-  display: flex;
-  align-items: flex-start;
+
   margin: 30px auto;
   max-width: 1000px;
   padding-top: 30px;
@@ -19,17 +18,13 @@ body {
   background-size: contain;
 }
 
-#main-content {
-  flex: 1;
-  padding: 0 15px;
-}
-
-h4, h3, h2 {
+h3, h2 {
   font-family: "Kaushan Script", cursive;
+  color: #ffffff;
 }
 
 a {
-  color: #ffffff;
+  color: #61afef;
   font-family: "Kalam", sans-serif;
   text-decoration: none;
 }
@@ -135,10 +130,9 @@ a:visited {
   line-height: 1;
 }
 
-ul, li {
-  font-family: "Kalam", sans-serif;
-  font-size: 1.2em;
-  color: #ffffff;
+ul {
+  list-style-type: square;
+  color: #61afef;
 }
 
 #comment {
