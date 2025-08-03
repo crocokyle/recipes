@@ -1,45 +1,40 @@
 ---
 layout: recipe
-title: Guinness Beef Stew
-category: Soups
-persons: 6-8
+title: Basic Omelette
+category: Breakfast
+persons: 1
 image:
 ---
 
 <!-- Zutaten -->
 
-| 2 tbsp | olive oil |
-| 2.5 lbs. | beef chuck or beef brisket |
-| 3/4 tsp  | salt |
-| 3/4 tsp  | pepper |
-| 4 | garlic cloves (*minced*) |
-| 1 | onion (*yellow or white*) |
-| 3 tbsp | flour (*all-purpose/plain*) |
-| 14.9 oz | Guinness Beer |
-| 4 Tbsp | tomato paste |
-| 3 cups | chicken stock/broth |
-| 8 oz | sliced baby bella mushrooms |
-| 3 | carrots (*peeled and cut into 1/2 inch thick pieces*) |
-| 2 | large celery stalks (*cut into 1 inch pieces*) |
-| 2 | bay leaves |
-| 3 | springs thyme (*or 1 tsp dried thyme leaves*) |
+| 3   | Eggs |
+| 2 oz.  | Baby bella mushrooms |
+| 2 oz.  | chopped, cooked bacon |
+| 3 oz   | Mexican shredded cheese |
 
 <!-- ad -->
 
+
+
 <!-- Prep -->
 
-- Trim the fat if using brisket, then cut the beef into 2-inch chunks. Pat dry, then sprinkle with salt and pepper. 
-- Heat oil in a heavy-based pot over high heat. Add beef in batches and brown well all over. Remove onto plate. Repeat with the remaining beef.
-- (Optional) If you have a bottle/can size of Guinness that isn't a multiple of 14.9 oz, deglaze the pan with whatever is leftover.
+- Sauté the mushrooms using salt, pepper, and butter at medium-high heat (if using an aluminum or ceramic pan) or medium heat (if using a cast iron or carbon steel).
+- Cook the bacon using your preferred method and chop into half-inch squares.
+- Wash and dry the spinach.
+- Scramble 3 eggs in a cup or bowl
 
 <!-- Instructions -->
 
-1. Lower the heat to medium. If the pot is looking dry, add oil.
-2. Cook garlic and onion for 3 minutes until softening.
-3. Add flour and stir for 1 minute to cook off the flour.
-4. Add Guinness, chicken broth/stock and tomato paste. Mix well (to ensure flour dissolves well), add bay leaves and thyme.
-5. Return beef into the pot (including any juices). Liquid level should just cover.
-6. Cover, lower heat so it is bubbling gently. Cook for 2 hours. The beef should be pretty tender after the 2 hours.
-7. Add the mushrooms, carrots and celery. Depending on how soft you want the vegetables to be, add them 15 minutes earlier.
-8. Remove the lid, then simmer for a further 30 – 45 minutes or until the beef falls apart at a touch, the sauce has reduced and thickened slightly.
-9. Skim off fat on the surface, if desired. Adjust salt and pepper to taste. Remove bay leaves and thyme.
+1. Using a ceramic pan, preheat at 7/9 on an electric stove.
+2. Once the pan is feeling toasty, if you hover your hand about an inch above it, add a small amount of butter to the pan.
+3. Once the butter is starting to bubble, pour in the eggs.
+4. After about 30 seconds, start adding half of your shredded cheese to half of the omelette.
+5. Add your mushrooms, bacon, and spinach (or whatever toppings you want) evenly on the same half as the cheese.
+6. Add the rest of your cheese on top
+7. Tilt the pan back and forth periodically to see how runny the eggs are.
+   > *If the pan is too hot, you'll see/smell smoke and hear loud sizzling. If too cold, you won't hear or smell much.*
+8. Once about half of the eggs are cooked, and half runny, fold the omelette in half. This usually takes about 4-5 minutes.
+   > *Usually you need to fold the omelette further than you think to actually get it folded in half.*
+9. Once you've got the Maillard reaction you want on the bottom, flip the omelette for about 1-2 minutes to get it on the other side and immediately plate it.
+   > *Depending on the pan's temperature, you may already have the Maillard reaction on both sides. If that is the case, plate it right away.*
