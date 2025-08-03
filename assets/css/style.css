@@ -95,6 +95,7 @@ a:visited {
 
 #ingredients > table {
   padding: 5px;
+  text-align: center;
   width: 90%;
 }
 
