@@ -133,8 +133,8 @@ a:visited {
 }
 
 ul {
-  list-style-type: square;
-  color: #61afef;
+  list-style-type: circle;
+  color: #ffffff;
 }
 
 #comment {

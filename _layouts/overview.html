@@ -8,7 +8,7 @@
         <div id="table-of-contents">
             <h2>Categories</h2>
             {% for category in site.categories %}
-            <details>
+            <details id="{{ category[0] | slugify }}">
                 <summary>{{ category[0] }}</summary>
                 <p>
                 <ul>
@@ -22,5 +22,16 @@
         </div> <!-- /table-of-contents -->
     </div>
 </div> <!-- /wrapper -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const detailsElement = document.querySelector(hash);
+            if (detailsElement && detailsElement.tagName === 'DETAILS') {
+                detailsElement.open = true;
+            }
+        }
+    });
+</script>
 </body>
 </html>
