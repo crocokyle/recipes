@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Basic Omelette
-category: Breakfast
+category: Shitty Food
 persons: 1
 image:
 ---
