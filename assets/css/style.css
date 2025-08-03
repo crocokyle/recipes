@@ -24,12 +24,6 @@ body {
   padding: 0 15px;
 }
 
-#list-item {
-  font-family: "Kalam", sans-serif;
-  font-size: 1.2em;
-  color: #ffffff;
-}
-
 h4, h3, h2 {
   font-family: "Kaushan Script", cursive;
 }
@@ -141,9 +135,10 @@ a:visited {
   line-height: 1;
 }
 
-ul {
-  list-style-type: square;
-  color: #61afef;
+ul, li {
+  font-family: "Kalam", sans-serif;
+  font-size: 1.2em;
+  color: #ffffff;
 }
 
 #comment {
