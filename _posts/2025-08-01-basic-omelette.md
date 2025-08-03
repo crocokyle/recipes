@@ -15,7 +15,7 @@ image:
 | 4 | garlic cloves (*minced*) |
 | 1 | onion (*yellow or white*) |
 | 3 tbsp | flour (*all-purpose/plain*) |
-14.9 oz Guinness Beer
+| 14.9 oz | Guinness Beer |
 | 4 Tbsp | tomato paste |
 | 3 cups | chicken stock/broth |
 | 8 oz | sliced baby bella mushrooms |
