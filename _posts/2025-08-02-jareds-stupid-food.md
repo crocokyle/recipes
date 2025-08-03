@@ -1,6 +1,6 @@
 ---
 layout: recipe
-title: Basic Omelette
+title: Jared's Shitty Omelette
 category: Shitty Food
 persons: 1
 image:
