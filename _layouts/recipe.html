@@ -5,7 +5,6 @@
     <div id="wrapper">
       <a href="{{site.url}}{{site.baseurl}}/"><div id="logo">&nbsp;</div></a>
       <h2 id="title">{{page.title}}</h2>
-      {% include nav.html %}
       {% if content contains "<!-- ad -->" %}
         {% assign parts = content | split:"<!-- ad -->" %}
         <div id="top">
@@ -34,7 +33,7 @@
       {% else %}
         {{ content }}
       {% endif %}
-
+      {% include nav.html %}
     </div> <!-- /wrapper -->
   </body>
 </html>
