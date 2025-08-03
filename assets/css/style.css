@@ -6,7 +6,6 @@ body {
 
 #wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   margin: 30px auto;
   max-width: 1000px;
@@ -18,10 +17,6 @@ body {
   background-repeat: round;
   box-shadow: 8px 5px 5px -5px rgba(0,0,0,0.75);
   background-size: contain;
-}
-
-#prep {
-  flex-basis: 100%;
 }
 
 #sidebar {
