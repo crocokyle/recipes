@@ -1,0 +1,21 @@
+---
+layout: overview
+title: "All Categories"
+permalink: /categories/
+---
+
+<div class="category-archive">
+    <h1>{{ page.title }}</h1>
+
+    {% for category in site.categories %}
+    {% assign category_name = category | first %}
+    <h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
+
+    <ul>
+        {% for post in category.last %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+</div>
