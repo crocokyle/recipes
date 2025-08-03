@@ -11,6 +11,8 @@ body {
   padding-left: 60px;
   padding-right: 10px;
   padding-bottom: 20px;
+  background: url(recipe_bg.png) top left;
+  background-repeat: round;
   background: #333842;
   box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 }
