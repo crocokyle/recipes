@@ -7,17 +7,19 @@
       <h2 id="title">{{page.title}}</h2>
       {% if content contains "<!-- ad -->" %}
         {% assign parts = content | split:"<!-- ad -->" %}
-        <div id="ingredients">
-            <h3>Ingredients for {{page.persons}} persons:</h3>
-          {{ parts[0] }}
-        </div> <!-- /ingredients -->
-        <div id="picture">
-          {% if page.image %}
-            <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}" alt="Rezeptbild"/>
-          {% else %}
-            <img src="https://dummyimage.com/300x200/de1bde/ffffff.png" alt="Rezeptbild"/>
-          {% endif %}
-        </div> <!-- /picture -->
+        <div id="top">
+          <div id="ingredients">
+              <h3>Ingredients for {{page.persons}} persons:</h3>
+            {{ parts[0] }}
+          </div> <!-- /ingredients -->
+          <div id="picture">
+            {% if page.image %}
+              <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}" alt="Rezeptbild"/>
+            {% else %}
+              <img src="https://dummyimage.com/300x200/de1bde/ffffff.png" alt="Rezeptbild"/>
+            {% endif %}
+          </div> <!-- /picture -->
+        </div>
 
         <div id="prep">
           <h3>Prep:</h3>

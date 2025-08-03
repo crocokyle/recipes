@@ -5,7 +5,8 @@ body {
 }
 
 #wrapper {
-
+  display: flex;
+  flex-direction: column;
   margin: 30px auto;
   max-width: 1000px;
   padding-top: 30px;
