@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang={{site.language}}>
-{% include head.html %}
-<body>
-<div id="wrapper">
-  {% include nav.html %}
-  <h2 id="title">{{page.title}}</h2>
-  {% if content contains "<!-- ad -->" %}
-  <div id="ingredients">
-    <h3>Ingredients for {{page.persons}} persons:</h3>
-    {{ content | split:"<!-- ad -->" | first }}
-  </div> <!-- /ingredients -->
-  <div id="picture">
-    {% if page.image %}
-    <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}" alt="Rezeptbild"/>
-    {% else %}
-    <img src="https://dummyimage.com/300x200/de1bde/ffffff.png" alt="Rezeptbild"/>
-    {% endif %}
-  </div> <!-- /picture -->
+  {% include head.html %}
+  <body>
+    <div id="wrapper">
+      {% include nav.html %}
+      <h2 id="title">{{page.title}}</h2>
+      {% if content contains "<!-- ad -->" %}
+        {% assign parts = content | split:"<!-- ad -->" %}
+        <div id="ingredients">
+            <h3>Ingredients for {{page.persons}} persons:</h3>
+          {{ parts[0] }}
+        </div> <!-- /ingredients -->
+        <div id="picture">
+          {% if page.image %}
+            <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}" alt="Rezeptbild"/>
+          {% else %}
+            <img src="https://dummyimage.com/300x200/de1bde/ffffff.png" alt="Rezeptbild"/>
+          {% endif %}
+        </div> <!-- /picture -->
 
-  <div id="prep">
-    <h3>Prep:</h3>
-    {{ content | split:"<!-- ad -->" | last }}
-  </div> <!-- /prep -->
-  <div id="instructions">
-    <h3>Instructions:</h3>
-    {{ content | split:"<!-- ad -->" | last }}
-  </div> <!-- /instructions -->
+        <div id="prep">
+          <h3>Prep:</h3>
+          {{ parts[1] | split: "<!-- Instructions -->" | first }}
+        </div> <!-- /prep -->
+        <div id="instructions">
+            <h3>Instructions:</h3>
+          {{ parts[1] | split: "<!-- Instructions -->" | last }}
+        </div> <!-- /instructions -->
 
-  {% else %}
-  {{ content }}
-  {% endif %}
+      {% else %}
+        {{ content }}
+      {% endif %}
 
-  <div id="back">
-    <a href="{{site.url}}{{site.baseurl}}/">
-      back to index
-    </a>
-  </div> <!-- /back -->
-</div> <!-- /wrapper -->
-</body>
+     <div id="back">
+       <a href="{{site.url}}{{site.baseurl}}/">
+           Home
+       </a>
+     </div> <!-- /back -->
+    </div> <!-- /wrapper -->
+  </body>
 </html>
