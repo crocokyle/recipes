@@ -28,18 +28,18 @@ h4, h3, h2 {
 }
 
 a {
-  color: #00ade3;
+  color: #ffffff;
   font-family: "Kalam", sans-serif;
   text-decoration: none;
 }
 
 a:hover {
-  color: #b20436;
+  color: #7db6ee;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #690220;
+  color: #61afef;
   text-decoration: none;
 }
 
