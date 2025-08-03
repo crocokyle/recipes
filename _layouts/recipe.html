@@ -4,8 +4,8 @@
   <body>
     <div id="wrapper">
       <a href="{{site.url}}{{site.baseurl}}/"><div id="logo">&nbsp;</div></a>
-      {% include nav.html %}
       <h2 id="title">{{page.title}}</h2>
+      {% include nav.html %}
       {% if content contains "<!-- ad -->" %}
         {% assign parts = content | split:"<!-- ad -->" %}
         <div id="top">
