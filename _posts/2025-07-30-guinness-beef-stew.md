@@ -3,7 +3,7 @@ layout: recipe
 title: Guinness Beef Stew
 category: Soups
 persons: 6-8
-image:
+image: gunniess-beef-stew.jpg
 ---
 
 <!-- Ingredients -->
