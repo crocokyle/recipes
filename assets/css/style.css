@@ -5,7 +5,8 @@ body {
 }
 
 #wrapper {
-
+  display: flex;
+  align-items: flex-start;
   margin: 30px auto;
   max-width: 1000px;
   padding-top: 30px;
@@ -17,6 +18,17 @@ body {
   box-shadow: 8px 5px 5px -5px rgba(0,0,0,0.75);
   background-size: contain;
 }
+
+#sidebar {
+  width: 250px;
+  padding: 0 15px;
+}
+
+#main-content {
+  flex: 1;
+  padding: 0 15px;
+}
+
 
 h3, h2 {
   font-family: "Kaushan Script", cursive;
