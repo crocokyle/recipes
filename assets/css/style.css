@@ -1,3 +1,10 @@
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px; /* Optional: Adds some space below this section */
+}
+
 body {
   background-color: #253041;
   color: #cccccc;
@@ -88,8 +95,10 @@ a:visited {
 }
 
 #wrapper {
+  display: flex;
   padding: 30px 10px 20px 60px;
   transform-style: preserve-3d;
+  flex-direction: column;
   transform-origin: left;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -98,7 +107,6 @@ a:visited {
 
 /* Page Content Styles */
 #ingredients {
-  float: left;
   font-family: "Kalam", sans-serif;
   width: 60%;
 }
@@ -124,7 +132,6 @@ a:visited {
 #picture {
   width: 40%;
   text-align: center;
-  float: right;
 }
 
 #picture > img {
