@@ -80,8 +80,7 @@ a:visited {
   flex-direction: column;
   margin: 30px auto;
   max-width: 1000px;
-  background: url(recipe_bg.png) top left;
-  background-repeat: round;
+  background: url(recipe_bg.png) round top left;
   box-shadow: 15px 10px 10px -5px rgba(0,0,0,0.75);
   background-size: contain;
   border-top-right-radius: 20px;
@@ -89,19 +88,12 @@ a:visited {
 }
 
 #wrapper {
-  padding-top: 30px;
-  padding-left: 60px;
-  padding-right: 10px;
-  padding-bottom: 20px;
-  background: url(recipe_bg.png) top left;
-  background-repeat: round;
-
-  /* Animation properties */
+  padding: 30px 10px 20px 60px;
   transform-style: preserve-3d;
   transform-origin: left;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-color: #253041;
+  background: #253041 url(recipe_bg.png) round top left;
 }
 
 /* Page Content Styles */
