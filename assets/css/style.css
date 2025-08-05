@@ -17,6 +17,8 @@ body {
   background-repeat: round;
   box-shadow: 8px 5px 5px -5px rgba(0,0,0,0.75);
   background-size: contain;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 h4, h3, h2, summary {
