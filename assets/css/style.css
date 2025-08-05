@@ -89,6 +89,13 @@ a:visited {
 }
 
 #wrapper {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  background: url(recipe_bg.png) round top left;
+  background-size: contain;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   flex-grow: 1; /* Allows it to take up the remaining space of #book-container */
   overflow-y: auto;
   padding: 30px 10px 20px 60px;
