@@ -99,7 +99,8 @@ a:visited {
   /* Animation properties */
   transform-style: preserve-3d;
   transform-origin: left;
-
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: #253041;
 }
 
