@@ -2,39 +2,41 @@
 <html lang={{site.language}}>
   {% include head.html %}
   <body>
-    <div id="wrapper">
-      <a href="{{site.url}}{{site.baseurl}}/"><div id="logo">&nbsp;</div></a>
-      <h2 id="title">{{page.title}}</h2>
-      {% if content contains "<!-- ad -->" %}
-        {% assign parts = content | split:"<!-- ad -->" %}
-        {% include tags.html %}
-        <div id="top">
-          <div id="ingredients">
-              <h3>Makes {{page.persons}} servings:</h3>
-            {{ parts[0] }}
-          </div> <!-- /ingredients -->
-          <div id="picture">
-            {% if page.image %}
-              <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}"/>
-            {% else %}
-              <img src="https://dummyimage.com/300x200/de1bde/ffffff.png"/>
-            {% endif %}
-          </div> <!-- /picture -->
-        </div>
+    <div id="book-container">
+      <div id="wrapper">
+        <a href="{{site.url}}{{site.baseurl}}/"><div id="logo">&nbsp;</div></a>
+        <h2 id="title">{{page.title}}</h2>
+        {% if content contains "<!-- ad -->" %}
+          {% assign parts = content | split:"<!-- ad -->" %}
+          {% include tags.html %}
+          <div id="top">
+            <div id="ingredients">
+                <h3>Makes {{page.persons}} servings:</h3>
+              {{ parts[0] }}
+            </div> <!-- /ingredients -->
+            <div id="picture">
+              {% if page.image %}
+                <img src="{{site.url}}{{site.baseurl}}/assets/images/{{page.image}}"/>
+              {% else %}
+                <img src="https://dummyimage.com/300x200/de1bde/ffffff.png"/>
+              {% endif %}
+            </div> <!-- /picture -->
+          </div>
 
-        <div id="prep">
-          <h3>Prep:</h3>
-          {{ parts[1] | split: "<!-- Instructions -->" | first }}
-        </div> <!-- /prep -->
-        <div id="instructions">
-            <h3>Instructions:</h3>
-          {{ parts[1] | split: "<!-- Instructions -->" | last }}
-        </div> <!-- /instructions -->
+          <div id="prep">
+            <h3>Prep:</h3>
+            {{ parts[1] | split: "<!-- Instructions -->" | first }}
+          </div> <!-- /prep -->
+          <div id="instructions">
+              <h3>Instructions:</h3>
+            {{ parts[1] | split: "<!-- Instructions -->" | last }}
+          </div> <!-- /instructions -->
 
-      {% else %}
-        {{ content }}
-      {% endif %}
-    </div> <!-- /wrapper -->
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div> <!-- /wrapper -->
+    </div>
     {% include nav.html %}
   </body>
 </html>

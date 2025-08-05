@@ -28,3 +28,32 @@
     </a>
   </div>
 {% endif %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
+    const wrapper = document.getElementById('wrapper');
+
+    if (nextButton) {
+      nextButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const nextPageUrl = nextButton.querySelector('a').href;
+        wrapper.classList.add('flip-to-next');
+        setTimeout(function() {
+          window.location.href = nextPageUrl;
+        }, 800);
+      });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        const prevPageUrl = prevButton.querySelector('a').href;
+        wrapper.classList.add('flip-to-previous');
+        setTimeout(function() {
+          window.location.href = prevPageUrl;
+        }, 800);
+      });
+    }
+  });
+</script>
